@@ -29,7 +29,7 @@ const reverseText = (text) => {
 const isPalindrome = (text) => {
     if (!isString(text)) return false;
 
-    return text === reverseText(text);
+    return text.toLowerCase() === reverseText(text).toLowerCase();
 };
 
 module.exports = {

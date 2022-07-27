@@ -1,6 +1,6 @@
 const iechoRouter = require('express').Router();
 
-const { reverseText } = require('../controllers/iecho');
+const { reverseText, isPalindrome } = require('../controllers/iecho');
 
 
 iechoRouter.use('/', (req, res) => {
@@ -10,8 +10,7 @@ iechoRouter.use('/', (req, res) => {
         return res.status(400).json({ error: 'no text' });
     }
 
-    const result = reverseText(text);
-    res.json({ text: result, palindrome: text === result });
+    res.json({ text: reverseText(text), palindrome: isPalindrome(text) });
 });
 
 module.exports = iechoRouter;

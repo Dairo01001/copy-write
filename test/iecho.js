@@ -30,6 +30,10 @@ describe('Funciones reverseText, isPalindrome', () => {
             assert.equal(iecho.isPalindrome(""), true);
         });
 
+        it('Deve retornar true si se le pasa "Ana"', () => {
+            assert.equal(iecho.isPalindrome("Ana"), true);
+        });
+
         it('Retorna "true" verdadero si es palindromo', () => {
             assert.equal(true, iecho.isPalindrome('ana'));
         });
